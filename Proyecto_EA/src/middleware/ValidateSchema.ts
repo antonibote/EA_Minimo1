@@ -4,6 +4,7 @@ import Logging from '../library/Logging';
 import { IUser } from '../models/User';
 import { IProduct } from '../models/Product';
 import { IPurchase } from '../models/Purchase';
+import { IFaq } from '../models/FAQ';
 import mongoose from 'mongoose';
 
 export const ValidateSchema = (schema: ObjectSchema) => {
@@ -57,6 +58,23 @@ export const Schemas = {
             username: Joi.string().required(),
             name: Joi.string().required(),
             quantity: Joi.number().integer().min(1)
+        }),
+
+    },
+    FAQ: {
+        create: Joi.object<IFaq>({
+            username: Joi.string().required(),
+            question: Joi.string().required(),
+            answer: Joi.string().required(),
+            likes: Joi.number().integer().min(1).required(),
+            verified: Joi.boolean(),
+        }),
+        update: Joi.object<IFaq>({
+            username: Joi.string().required(),
+            question: Joi.string().required(),
+            answer: Joi.string().required(),
+            likes: Joi.number().integer().min(1),
+            verified: Joi.boolean(),
         }),
 
     }

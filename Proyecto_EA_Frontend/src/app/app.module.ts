@@ -15,6 +15,10 @@ import {PurchaseComponent} from './components/purchase/purchase.component';
 import { PurchaseDetailComponent } from './components/purchase-detail/purchase-detail.component';
 import { PurchaseNotificationComponent } from './components/notifications/purchase-notification/purchase-notification.component';
 import { PurchaseFailureNotificationComponent } from './components/notifications/purchase-failure-notification/purchase-failure-notification.component';
+import { FAQsComponent } from './components/faqs/faqs.component';
+import { FaqsDetailComponent } from './components/faqs-detail/faqs-detail.component';
+import { FaqNotificationComponent } from './components/notifications/faq-notification/faq-notification.component';
+import { FaqFailureNotificationComponent } from './components/notifications/faq-failure-notification/faq-failure-notification.component';
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { PurchaseFailureNotificationComponent } from './components/notifications
     PurchaseComponent,
     PurchaseDetailComponent,
     PurchaseNotificationComponent,
-    PurchaseFailureNotificationComponent
+    PurchaseFailureNotificationComponent,
+    FAQsComponent,
+    FaqsDetailComponent,
+    FaqNotificationComponent,
+    FaqFailureNotificationComponent
   ],
   imports: [
     BrowserModule,
